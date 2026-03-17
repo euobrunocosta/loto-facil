@@ -502,6 +502,130 @@ footer {
     font-size: 0.8rem;
 }
 
-.hidden {
-    display: none !important;
+@media (max-width: 768px) {
+    body {
+        padding: 0.75rem;
+    }
+
+    .container {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    button:active {
+        transform: scale(0.98);
+        filter: brightness(0.9);
+    }
+
+    .checker-section {
+        padding: 1.25rem;
+    }
+
+    .checker-header {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .match-badge {
+        font-size: 0.75rem;
+    }
+
+    .checker-controls {
+        margin-top: 0.5rem;
+    }
+
+    #drawInput {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .results-section {
+        gap: 1.5rem;
+    }
+
+    .group-card {
+        padding: 1.25rem;
+    }
+
+    .number-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.4rem;
+    }
+
+    .number-ball {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .history-list {
+        grid-template-columns: 1fr;
+    }
+
+    .legend {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+        font-size: 0.8rem;
+    }
+
+    .form-controls {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        padding: 1rem;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
+    body {
+        background-image: 
+            radial-gradient(at 0% 0%, hsla(253,16%,10%,1) 0, transparent 70%), 
+            radial-gradient(at 100% 100%, hsla(339,49%,15%,1) 0, transparent 70%);
+    }
+
+    .number-grid {
+        gap: 0.35rem;
+    }
+
+    .number-ball {
+        font-size: 0.9rem;
+    }
+    
+    .group-header {
+        font-size: 0.75rem;
+    }
 }
