@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotofácil Generator Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lotofácil Pro</h1>
+            <p class="subtitle">Smart grouping strategy (10 base + 5 variable)</p>
+        </header>
+
+        <section class="checker-section">
+            <div class="checker-header">
+                <h3>Result Checker</h3>
+                <span id="matchCounter" class="match-badge">0 / 15 Hits</span>
+            </div>
+            <div class="checker-controls">
+                <input type="text" id="drawInput" placeholder="Enter draw numbers (01-25)..." maxlength="100">
+                <button id="clearDrawBtn" class="btn-text">Clear</button>
+            </div>
+            <p id="drawStatus" class="draw-warning hidden"></p>
+            <p class="form-help">Type numbers (comma/space) or enter them one by one. Matches will highlight below.</p>
+        </section>
+
+        <div class="controls">
+            <button id="generateBtn">Generate Combinations</button>
+            <button id="manualToggleBtn" class="btn-secondary">Manual Input</button>
+            <button id="saveBtn" class="btn-accent">Save Combination</button>
+        </div>
+
+        <section id="manualForm" class="manual-section hidden">
+            <h3>Manual Entry</h3>
+            <p class="form-help">Enter 15 numbers (01-25) for each group, separated by spaces or commas.</p>
+            <div class="form-group">
+                <label>Group 1</label>
+                <input type="text" id="manualG1" placeholder="e.g. 01, 02, 03...">
+            </div>
+            <div class="form-group">
+                <label>Group 2</label>
+                <input type="text" id="manualG2" placeholder="e.g. 01, 02, 05...">
+            </div>
+            <div class="form-group">
+                <label>Group 3</label>
+                <input type="text" id="manualG3" placeholder="e.g. 01, 02, 07...">
+            </div>
+            <div class="form-controls">
+                <button id="submitManualBtn">Import & Display</button>
+                <button id="cancelManualBtn" class="btn-text">Cancel</button>
+            </div>
+        </section>
+
+        <div id="validationStatus" class="validation-status"></div>
+
+        <main id="results" class="results-section">
+            <!-- Results will be injected here -->
+            <div style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                Click the button to generate your 3 groups of 15 numbers
+            </div>
+        </main>
+
+        <section class="history-section">
+            <div class="history-header">
+                <h2>Saved History</h2>
+                <button id="clearHistoryBtn" class="btn-text">Clear All</button>
+            </div>
+            <div id="historyList" class="history-list">
+                <!-- Saved items will appear here -->
+                <p class="empty-state">No saved combinations yet.</p>
+            </div>
+        </section>
+
+        <div class="legend">
+            <div class="legend-item">
+                <span class="dot base"></span>
+                <span>Base Numbers (10)</span>
+            </div>
+            <div class="legend-item">
+                <span class="dot extra"></span>
+                <span>Random Extras (5)</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Lotofácil Strategy Tool
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
