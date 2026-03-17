@@ -1,5 +1,7 @@
 # Lotofácil Generator Strategy
 
+[Live Demo](https://euobrunocosta.github.io/loto-facil/)
+
 This project provides a smart grouping strategy for Lotofácil (1..25), picking 15 numbers in 3 separate groups based on a fixed set of 10 base numbers.
 
 ## Project Structure
